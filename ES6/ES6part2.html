@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Part2</title>
+</head>
+<body>
+    <script>
+        //Object Destructuring
+
+        // Array Destructuring
+
+        // let data = [10,20,30];
+        // let [x,y,z] = data;
+        // let x = data[0];
+        // let y = data[1];
+        // let z = data[2];
+        // console.log(x,y,z);
+
+
+        // Object Destructuring
+
+        // let student = {
+        //     name: "john",
+        //     age: 25
+        // };
+        // let name = student.name;
+        // let age = student.age;
+        // let{name,age} = student;
+        // console.log(name,age);
+
+        //Argument Destructuring
+
+            // function test({name, age}){
+            //     console.log(name, age);
+            // }
+            // test({
+            //     name: "John",
+            //     age: 20
+            // })
+
+
+            //Spread
+            function sum(x,y,z,a){
+                console.log(x+y+z+a);
+            }
+            let data = [10,20,40,30];
+            sum(...data);
+    </script>
+</body>
+</html>
