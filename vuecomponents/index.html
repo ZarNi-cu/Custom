@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Component</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <button @click="increase">Increase</button>
+        <p>{{ count }}</p> -->
+        <!-- <increase-button></increase-button>
+        <increase-button></increase-button> -->
+        <student-list :students="['John','Mary','Jack']"></student-list>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        Vue.component('student-list',{
+            props: ['students'],
+            template: `<ul><li v-for="(student, index) in students" v-bind:key="index">{{student}}</li></ul>`
+            })
+        var app = new Vue (
+            {
+                el: "#app",
+            } 
+        );
+
+
+    </script>
+</body>
+</html>
