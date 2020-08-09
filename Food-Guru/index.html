@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodGuru</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="mt-4">
+        <div class="container">
+            <h1 class="text-center">
+                <a href="index.html">FoodGuru</a>
+            </h1>
+        </div>
+
+         <div class="container">
+            <ul class="list-unstyled">
+                <li class="my-4" v-for="(restaurant,index) in restaurants"@click="getRestaurant(index)">
+                    <img :src="'restaurant/'+restaurant.image" alt=""class="img-fluid">
+                    <div class="restaurant.name">
+                        {{restaurant.name}}
+                    </div>
+                    <div class="restaurant-description">
+                        <div class="text-muted mb-2"><span class="text-primary">$</span>$$ rice,salad, asian</div>
+                        <div class="text-muted"><strong>NO</strong> minimum | <strong>Free</strong> Delivery</div>
+                    </div>
+                
+                </li>
+            </ul> 
+         </div>
+         <!-- <img v-bind:src="'res
+                 
+                </li>
+            </ul> taurant/'+photo" v-bind:alt="title"class="img-fluid"> -->
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({ 
+
+            el: "#app",
+
+            data: {
+
+                
+
+
+                restaurants: [
+                {
+                    name: "Naung Inle",
+                    image: "kko.jpg"
+                },
+                {
+                    name: "Pezzo",
+                    image: "kaung.jpg"
+                },
+                {
+                    name: "Gong Cha",
+                    image: "gong.jpg"
+                },
+                {
+                    name: "Tea Land",
+                    image: "naung-inle.jpg"
+                },
+                {
+                    name: "Zein Cafe",
+                    image: "pezzp.jpg"
+                },
+                {
+                    name: "Shwe Kabar Lone",
+                    image: "shwe.jpg"
+                },
+                {
+                    name: "Kuang Kyaik Biryani",
+                    image: "shwemaunk.jpg"
+                },
+                {
+                    name: "U Kyi Mandalay Mont T",
+                    image: "tealand.jpg"
+                },
+                {
+                    name: "Shwe Maunk",
+                    image: "ukyi.jpg"
+                },
+                {
+                    name: "KKO House",
+                    image: "zein.jpg"
+                },
+                ]},
+            methods: {
+                getRestaurant: function(index){
+                    window.location.href = "restaurant.html"             
+            }
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

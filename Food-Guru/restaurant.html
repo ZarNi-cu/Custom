@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodGuru</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="mt-3">
+        <div class="container">
+            <h1 class="text-center">
+                <a href="index.html">FoodGuru</a>
+            </h1>
+        </div>
+
+        <div class="container-fluid px-0">
+            <img :src="'restaurant/'+restaurant.image" alt=""class="img-fluid w-100 banner">
+
+        </div>
+
+               <div class="card rounded-0 shadow-sm">
+                   <div class="card-body">
+                    <div class="container">
+                        <div class="restaurant.name">
+                            {{restaurant.name}}
+                        </div>
+                        <div class="restaurant-description">
+                            <div class="text-muted mb-2"><span class="text-primary">$</span>$$ rice,salad, asian</div>
+                        </div>
+                    </div>
+                   </div>
+               </div>
+                    <div class="card px-0 rounded-0 mt-4">
+                        <div class="card-body">
+                            <div class="item"v-for="item in restaurant.items">
+                              <div class="name"> {{item.name}}</div>
+                              <div class="price mt-3"> MMK {{item.price}}</div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                
+      
+        <!-- <img v-bind:src="'restaurant/'+photo" v-bind:alt="title"class="img-fluid"> -->
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        
+        var app = new Vue({ 
+
+            el: "#app",
+
+            data: {
+
+                
+
+
+                restaurant: {
+                    name: "Naung Inle",
+                    image: "kko.jpg",
+                    items: [
+                        {
+                            name:"Shan Noodle" ,
+                            price:1500
+                        },
+                        {
+                            name: "Hot Tofu Noodle",
+                            price:1500
+                        },
+                        {
+                            name:"Fried Tofu Noodle" ,
+                            price:1500
+                        },
+                        {
+                            name:"Nhin Htoke" ,
+                            price:1500
+                        },
+                        {
+                            name: "Pork Head Saland",
+                            price:2000
+                        },
+                    ]
+                },
+            
+                },
+            methods: {
+               
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+body{
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.restaurant.name{
+    font-weight: 800;
+    margin-top: 15px;
+}
+.restaurant-description{
+    font-size: 0.8rem;
+}
+.banner{
+    height: 250px;
+}
+.name,price{
+    font-weight: 700;
+    font-size: 0.9rem;
+}
